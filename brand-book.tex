@@ -12,15 +12,13 @@
   \newfontfamily\cyrillicfont{Noto Serif}
   \newfontfamily\cyrillicfontsf{Noto Sans}
   \newfontfamily\cyrillicfonttt{Roboto Mono}
-\usepackage{lmodern}
 \usepackage{microtype}
 \usepackage{anyfontsize}
 \usepackage{csquotes}
 \usepackage{iexec}
 \usepackage{svg}
-\usepackage{multicol}
 \usepackage{setspace}
-\usepackage[landscape]{geometry}
+\usepackage[paperwidth=11in, paperheight=5in]{geometry}
 \usepackage{hyperref}
   \hypersetup{colorlinks=true,allcolors=zlightblue}
 \usepackage{xcolor}
@@ -32,18 +30,7 @@
   \definecolor{zlightblue}{HTML}{476C9B}
   \definecolor{rupbody}{rgb}{1,1,0.8}
   \definecolor{rupborder}{rgb}{0.6039,0,0.2}
-\usepackage{tabularx}
-\usepackage{tikz}
-  \usetikzlibrary{shapes}
-  \usetikzlibrary{arrows}
-  \usetikzlibrary{shadows}
-  \usetikzlibrary{trees}
-  \usetikzlibrary{fit}
-  \usetikzlibrary{calc}
-  \usetikzlibrary{positioning}
-  \usetikzlibrary{decorations.pathmorphing}
 \usepackage{graphicx}
-\usepackage{makecell}
 \pagestyle{empty}
 \usepackage[absolute]{textpos}\TPGrid{16}{16}
 
@@ -62,7 +49,7 @@
 
 \sffamily
 
-\iexec[quiet,log]{wget --no-check-certificate -N --quiet https://www.zerocracy.com/svg/logo.svg}
+\iexec[quiet,log]{wget --no-check-certificate -nc --quiet https://www.zerocracy.com/svg/logo.svg}
 
 \slide{%
   \includesvg[width=4em]{logo.svg}\\
@@ -73,13 +60,19 @@
   \href{https://www.zerocracy.com}{zerocracy.com}}
 
 \slide{
-  Mission: Replace managers by robots.
+  Mission:
   \par
-  Vision: Programmers make 10x times more.
+  \enquote{Replace Managers by Robots}}
+
+\slide{
+  Vision:
   \par
-  Value: Pay for deliverables.
+  \enquote{Programmers Make 10x Times More}}
+
+\slide{
+  Value:
   \par
-  Personality: Open and friendly.}
+  \enquote{Pay for Deliverables}}
 
 \slide{
   Logo:
