@@ -14,6 +14,7 @@
   \newfontfamily\cyrillicfonttt{Roboto Mono}
 \usepackage{microtype}
 \usepackage{anyfontsize}
+\usepackage{booktabs}
 \usepackage{csquotes}
 \usepackage{iexec}
 \usepackage{svg}
@@ -32,11 +33,10 @@
   \definecolor{rupborder}{rgb}{0.6039,0,0.2}
 \usepackage{graphicx}
 \pagestyle{empty}
-\usepackage[absolute]{textpos}\TPGrid{16}{16}
 
 \newcommand\slide[1]{%
   \pagebreak\topskip0pt\vspace*{\fill}%
-  \begin{center}\Huge%
+  \begin{center}\LARGE%
   #1
   \end{center}%
   \vspace*{\fill}}
@@ -51,6 +51,8 @@
 
 \iexec[quiet,log]{wget --no-check-certificate -nc --quiet https://www.zerocracy.com/svg/logo.svg}
 
+\newcommand\header[1]{{\LARGE #1:\\[1em]\par}}
+
 \slide{%
   \includesvg[width=4em]{logo.svg}\\
   Zerocracy
@@ -60,37 +62,43 @@
   \href{https://www.zerocracy.com}{zerocracy.com}}
 
 \slide{
-  Mission:
+  \header{Mission}
   \par
-  \enquote{Replace Managers by Robots}}
+  {\Huge \enquote{Replace Managers by Robots}\par}}
 
 \slide{
-  Vision:
+  \header{Vision}
   \par
-  \enquote{Programmers Make 10x Times More}}
+  {\Huge \enquote{Programmers Make 10x Times More}\par}}
 
 \slide{
-  Value:
+  \header{Value}
   \par
-  \enquote{Pay for Deliverables}}
+  {\Huge \enquote{Pay for Deliverables}\par}}
 
 \slide{
-  Logo:
+  \header{Logo}
   \par
   \includesvg[width=4em]{logo.svg}}
 
 \slide{
-  Color Palette:
+  \header{Color Palette}
   \par
   ...}
 
 \slide{
-  Typography:
+  \header{Typography}
   \par
-  ...}
+  \begin{tabular}{rl}
+  \toprule
+  Serif & {\rmfamily Noto Serif} \\
+  San Serif & {\sffamily Noto Sans} \\
+  Mono & {\ttfamily Roboto Mono} \\
+  \bottomrule
+  \end{tabular}}
 
 \slide{
-  Voice and Tone:
+  \header{Voice and Tone}
   \par
   ...}
 
