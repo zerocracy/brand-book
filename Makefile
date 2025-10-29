@@ -6,7 +6,7 @@
 SHELL=bash
 .PHONY: all test clean
 
-all: brand-book.pdf zip
+all: brand-book.pdf
 
 brand-book.pdf: brand-book.tex
 	latexmk -pdf -latexoption=-interaction=errorstopmode -latexoption=-halt-on-error $<
