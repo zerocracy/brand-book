@@ -19,6 +19,7 @@
 \usepackage{csquotes}
 \usepackage{iexec}
 \usepackage{svg}
+\usepackage{multicol}
 \usepackage{setspace}
 \usepackage[paperwidth=11in, paperheight=5in]{geometry}
 \usepackage{hyperref}
@@ -93,18 +94,18 @@
 \slide{
   \header{Typography}
   \par
-  \begin{tabular}{rl}
-  \toprule
-  Serif: & {\rmfamily Noto Serif} \\
-  San Serif: & {\sffamily Noto Sans} \\
-  Mono: & {\ttfamily Roboto Mono} \\
-  \bottomrule
-  \end{tabular}}
+  {\Huge\begin{multicols}{3}
+  {\rmfamily Noto Serif by Google}
+  \par\columnbreak\par
+  {\sffamily Noto Sans by Google}
+  \par\columnbreak\par
+  {\ttfamily Roboto Mono by Christian Robertson}
+  \end{multicols}\par}}
 
 \slide{
   \header{Voice and Tone}
   \par
-  \enquote{Zerocracy turns software projects into predictable, rule-driven systems --- where productivity isn't discussed, it's measured.}}
+  {\Huge\enquote{Zerocracy turns software projects into predictable, rule-driven systems---where productivity isn't discussed, it's measured.}\par}}
 
 \slide{\href{https://www.zerocracy.com}{zerocracy.com}}
 
