@@ -27,6 +27,7 @@ hard fdsymbol
 hard ffcode
 hard float
 hard fmtcount
+hard fontspec
 hard footmisc
 hard framed
 hard fvextra
@@ -43,6 +44,7 @@ hard mathtools
 hard microtype
 hard ncctools
 hard paralist
+hard polyglossia
 hard preprint
 hard stmaryrd
 hard svg
