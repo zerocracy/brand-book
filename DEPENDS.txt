@@ -43,6 +43,7 @@ hard makecell
 hard mathtools
 hard microtype
 hard ncctools
+hard noto
 hard paralist
 hard polyglossia
 hard preprint
