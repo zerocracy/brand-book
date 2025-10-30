@@ -13,6 +13,7 @@
   \newfontfamily\cyrillicfontsf{Noto Sans}
   \newfontfamily\cyrillicfonttt{Roboto Mono}
 \usepackage{microtype}
+\usepackage{tikz}
 \usepackage{anyfontsize}
 \usepackage{booktabs}
 \usepackage{csquotes}
@@ -23,14 +24,7 @@
 \usepackage{hyperref}
   \hypersetup{colorlinks=true,allcolors=zlightblue}
 \usepackage{xcolor}
-  \definecolor{zred}{HTML}{6A041D}
-  \definecolor{zgreen}{HTML}{386150}
-  \definecolor{zblue}{HTML}{27213C}
-  \definecolor{zorange}{HTML}{B86F52} % FF8552
-  \definecolor{zyellow}{HTML}{F9E784}
   \definecolor{zlightblue}{HTML}{476C9B}
-  \definecolor{rupbody}{rgb}{1,1,0.8}
-  \definecolor{rupborder}{rgb}{0.6039,0,0.2}
 \usepackage{graphicx}
 \pagestyle{empty}
 
@@ -58,8 +52,7 @@
   Zerocracy
   \\[1em]
   \large
-  Brand Book\\
-  \href{https://www.zerocracy.com}{zerocracy.com}}
+  Brand Book}
 
 \slide{
   \header{Mission}
@@ -79,12 +72,23 @@
 \slide{
   \header{Logo}
   \par
-  \includesvg[width=4em]{logo.svg}}
+  \includesvg[width=6em]{logo.svg}}
 
 \slide{
   \header{Color Palette}
   \par
-  ...}
+  \newcommand\hatch[1]{
+    \definecolor{zz}{HTML}{#1}%
+    \tikz{
+      \node[fill=zz, minimum width=2em, minimum height=3em] (p) {};
+      \node[font={\small}, anchor=north] at (p.south) {#1};}}
+  \hatch{ED230D}
+  \hatch{DD571C}
+  \hatch{F9E784}
+  \hatch{386150}
+  \hatch{476C9B}
+  \hatch{27213C}
+  \hatch{4B0082}}
 
 \slide{
   \header{Typography}
@@ -102,7 +106,6 @@
   \par
   ...}
 
-\slide{%
-  \href{mailto:team@zerocracy.com}{team@zerocracy.com}}
+\slide{\href{https://www.zerocracy.com}{zerocracy.com}}
 
 \end{document}
