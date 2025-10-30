@@ -23,9 +23,10 @@
 \usepackage{setspace}
 \usepackage[paperwidth=11in, paperheight=5in]{geometry}
 \usepackage{hyperref}
-  \hypersetup{colorlinks=true,allcolors=zlightblue}
+  \hypersetup{colorlinks=true,allcolors=zblue}
 \usepackage{xcolor}
-  \definecolor{zlightblue}{HTML}{476C9B}
+  \definecolor{zblue}{HTML}{48639C}
+  \definecolor{zblack}{HTML}{0C090D}
 \usepackage{graphicx}
 \pagestyle{empty}
 
@@ -37,10 +38,10 @@
   \vspace*{\fill}}
 
 \pagecolor{white}
-\date{\today}
 
 \begin{document}
-\setlength{\parindent}{0pt} % indent first line
+
+\color{zblack}
 
 \sffamily
 
@@ -83,13 +84,15 @@
     \tikz{
       \node[fill=zz, minimum width=2em, minimum height=3em] (p) {};
       \node[font={\small}, anchor=north] at (p.south) {#1};}}
-  \hatch{ED230D}
-  \hatch{DD571C}
-  \hatch{F9E784}
-  \hatch{386150}
-  \hatch{476C9B}
-  \hatch{27213C}
-  \hatch{4B0082}}
+  \hatch{DB261D} % red
+  \hatch{DD571C} % orange
+  \hatch{F9C22E} % yellow
+  \hatch{386150} % green
+  \hatch{08B2E3} % light blue
+  \hatch{48639C} % dark blue
+  \hatch{712F79} % violet
+  \hatch{0C090D} % black
+  }
 
 \slide{
   \header{Typography}
