@@ -15,8 +15,12 @@ jobs:
     steps:
       - run: |
           sudo apt-get update
-          sudo apt-get install --yes fonts-noto-core fonts-noto-extra
+          sudo apt-get install --yes fontconfig fonts-noto-core fonts-noto-extra
           fc-cache -f
+          fc-list | grep -i "Noto Serif" | head
+          fc-list | grep -i "Noto Sans"  | head
+          fc-match "Noto Serif"
+          fc-match "Noto Sans"
       - uses: actions/checkout@v5
       - uses: yegor256/latexmk-action@0.17.0
         with:
