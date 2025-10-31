@@ -13,16 +13,9 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-24.04
     steps:
-      - run: |
-          sudo apt-get update
-          sudo apt-get install --yes fontconfig fonts-noto-core fonts-noto-extra
-          fc-cache -f
-          fc-list | grep -i "Noto Serif" | head
-          fc-list | grep -i "Noto Sans"  | head
-          fc-match "Noto Serif"
-          fc-match "Noto Sans"
       - uses: actions/checkout@v5
-      - uses: yegor256/latexmk-action@0.17.0
+      - uses: yegor256/latexmk-action@0.18.0
         with:
           opts: -pdf
+          debs: fonts-noto-core fonts-noto-extra
           depends: DEPENDS.txt
