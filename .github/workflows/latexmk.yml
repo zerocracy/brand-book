@@ -15,7 +15,7 @@ jobs:
     steps:
       - run: |
           sudo apt-get update
-          sudo apt-get install --yes fonts-noto-core
+          sudo apt-get install --yes fonts-noto-core fonts-noto-extra
           fc-cache -f
       - uses: actions/checkout@v5
       - uses: yegor256/latexmk-action@0.17.0

@@ -44,7 +44,6 @@ hard mathtools
 hard microtype
 hard ncctools
 hard noto
-hard noto-otf
 hard paralist
 hard polyglossia
 hard preprint
