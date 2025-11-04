@@ -1,4 +1,4 @@
-# Our Brand Book
+# Brand Book of Zerocracy
 
 [![make](https://github.com/zerocracy/brand-book/actions/workflows/latexmk.yml/badge.svg)](https://github.com/zerocracy/brand-book/actions/workflows/latexmk.yml)
 
