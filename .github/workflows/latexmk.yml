@@ -17,5 +17,5 @@ jobs:
       - uses: yegor256/latexmk-action@0.18.0
         with:
           opts: -pdf
-          debs: fonts-noto-core fonts-noto-extra fonts-roboto
+          debs: fonts-noto-core fonts-noto-extra
           depends: DEPENDS.txt
