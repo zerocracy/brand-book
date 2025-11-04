@@ -25,8 +25,9 @@
 \usepackage{hyperref}
   \hypersetup{colorlinks=true,allcolors=zblue}
 \usepackage{xcolor}
-  \definecolor{zblue}{HTML}{48639C}
-  \definecolor{zblack}{HTML}{0C090D}
+  \definecolor{zred}{HTML}{ba1200}
+  \definecolor{zblue}{HTML}{33658a}
+  \definecolor{zblack}{HTML}{0c090d}
 \usepackage{graphicx}
 \pagestyle{empty}
 
@@ -47,7 +48,7 @@
 
 \iexec[quiet,log]{wget --no-check-certificate -nc --quiet https://www.zerocracy.com/svg/logo.svg}
 
-\newcommand\header[1]{{\scshape\LARGE #1:\\[1em]\par}}
+\newcommand\header[1]{{\scshape\LARGE\textcolor{zred}{#1:}\\[1em]\par}}
 
 \slide{%
   \includesvg[width=4em]{logo.svg}\\
@@ -138,19 +139,19 @@
 \slide{
   \header{Colors}
   \par
-  \newcommand\hatch[1]{
+  \newcommand\hatch[2]{
     \definecolor{zz}{HTML}{#1}%
     \tikz{
       \node[fill=zz, minimum width=2em, minimum height=3em] (p) {};
-      \node[font={\small}, anchor=north] at (p.south) {#1};}}
-  \hatch{0c090d} % black
-  \hatch{ba1200} % red
-  \hatch{526760} % gray
+      \node[font={\small}, anchor=north] (hex) at (p.south) {\parbox{4em}{\centering #1 \\ #2}};}}
+  \hatch{0c090d}{black}
+  \hatch{ba1200}{red}
+  \hatch{526760}{gray}
   \hspace{1em}
-  \hatch{d8a47f} % orange
-  \hatch{f1d302} % yellow
-  \hatch{558b6e} % green
-  \hatch{33658a} % dark blue
+  \hatch{d8a47f}{orange}
+  \hatch{f1d302}{yellow}
+  \hatch{558b6e}{green}
+  \hatch{33658a}{blue}
   }
 
 \slide{
