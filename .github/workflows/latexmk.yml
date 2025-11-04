@@ -21,3 +21,12 @@ jobs:
           opts: -pdf
           debs: fonts-noto-core fonts-noto-extra
           depends: DEPENDS.txt
+      - run: |
+          mkdir gh-pages
+          cp brand-book.pdf gh-pages
+      - uses: JamesIves/github-pages-deploy-action@v4.7.3
+        with:
+          branch: gh-pages
+          folder: gh-pages
+          clean: true
+        if: github.ref == 'refs/heads/master'
