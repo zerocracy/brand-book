@@ -1,10 +1,12 @@
-# SPDX-FileCopyrightText: Copyright (c) 2024-2025 Yegor Bugayenko
+# SPDX-FileCopyrightText: Copyright (c) 2024-2025 Zerocracy
 # SPDX-License-Identifier: MIT
 ---
 # yamllint disable rule:line-length
 name: latexmk
 'on':
   push:
+    branches:
+      - master
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
