@@ -47,6 +47,7 @@ hard noto
 hard paralist
 hard polyglossia
 hard preprint
+hard setspace
 hard stmaryrd
 hard svg
 hard textpos
