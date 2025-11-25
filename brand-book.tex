@@ -18,18 +18,18 @@
 \usepackage{csquotes}
 \usepackage{textcomp}
 \usepackage{iexec}
+  \iexec[quiet,log]{wget --no-check-certificate -nc --quiet https://www.zerocracy.com/svg/logo.svg}
 \usepackage{href-ul}
 \usepackage{svg}
 \usepackage{multicol}
 \usepackage{setspace}
 \usepackage[paperwidth=11in, paperheight=5in]{geometry}
 \usepackage{hyperref}
-  \hypersetup{colorlinks=true,allcolors=zblue}
+  \hypersetup{colorlinks=true,allcolors=blue}
 \usepackage{xcolor}
-  \definecolor{zwhite}{HTML}{fdfffc}
-  \definecolor{zred}{HTML}{ba1200}
-  \definecolor{zblue}{HTML}{33658a}
-  \definecolor{zblack}{HTML}{0c090d}
+  \iexec[quiet,log]{wget --quiet --no-check-certificate --no-clobber https://www.zerocracy.com/css/palette.css}
+  \iexec{grep -oE '\\.[a-zA-Z0-9_-]+\\\{color:.[0-9a-fA-F]+' < palette.css | sed -E 's/\\.([a-zA-Z0-9_-]+)\\\{color:.([0-9a-fA-F]+)/\\\\definecolor\{\\1\}\{HTML\}\{\\2\}/' > palette.tex}
+  \input{palette.tex}
 \usepackage{graphicx}
 \pagestyle{empty}
 
@@ -40,23 +40,21 @@
   \end{center}%
   \vspace*{\fill}}
 
-\pagecolor{zwhite}
+\pagecolor{steel}
 
 \begin{document}
 
-\color{zblack}
+\color{black}
 
 \sffamily
 
-\iexec[quiet,log]{wget --no-check-certificate -nc --quiet https://www.zerocracy.com/svg/logo.svg}
-
-\newcommand\header[1]{{\scshape\LARGE\textcolor{zred}{#1:}\\[1em]\par}}
+\newcommand\header[1]{{\scshape\LARGE\textcolor{red}{#1:}\\[1em]\par}}
 
 \slide{%
   \includesvg[width=4em]{logo.svg}\\
   Zerocracy
   \\[2em]
-  {\large\textcolor{zred}{\textbf{Brand Book}}\par}}
+  {\large\textcolor{red}{\textbf{Brand Book}}\par}}
 
 \newcommand\intro{\rmfamily\normalsize\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil\setlength{\parindent}{1.5em}}
 
@@ -138,19 +136,18 @@
 \slide{
   \header{Colors}
   \par
-  \newcommand\hatch[2]{
-    \definecolor{zz}{HTML}{#1}%
+  \newcommand\hatch[1]{
     \tikz{
-      \node[fill=zz, minimum width=2em, minimum height=3em] (p) {};
-      \node[font={\small}, anchor=north] (hex) at (p.south) {\parbox{4em}{\centering #1 \\ #2}};}}
-  \hatch{0c090d}{black}
-  \hatch{ba1200}{red}
-  \hatch{526760}{gray}
+      \node[fill=#1, minimum width=2em, minimum height=3em] (p) {};
+      \node[font={\small}, anchor=north] (hex) at (p.south) {\parbox{4em}{\centering #1 \\ hex}};}}
+  \hatch{black}
+  \hatch{red}
+  \hatch{gray}
   \hspace{1em}
-  \hatch{d8a47f}{orange}
-  \hatch{f1d302}{yellow}
-  \hatch{558b6e}{green}
-  \hatch{33658a}{blue}
+  \hatch{orange}
+  \hatch{yellow}
+  \hatch{green}
+  \hatch{blue}
   }
 
 \slide{
