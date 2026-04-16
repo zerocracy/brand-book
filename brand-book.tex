@@ -3,14 +3,6 @@
 
 \documentclass{article}
 \usepackage{fontspec}
-\usepackage{polyglossia}
-  \setmainlanguage{english}
-  \setmainfont{Noto Serif}
-  \setsansfont{Noto Sans}
-  \setmonofont{Noto Sans Mono}
-  \newfontfamily\cyrillicfont{Noto Serif}
-  \newfontfamily\cyrillicfontsf{Noto Sans}
-  \newfontfamily\cyrillicfonttt{Noto Sans Mono}
 \usepackage{microtype}
 \usepackage{tikz}
 \usepackage{anyfontsize}
@@ -31,6 +23,28 @@
   \iexec{grep -oE '\\.[a-zA-Z0-9_-]+\\\{color:.[0-9a-fA-F]+' < palette.css | sed -E 's/\\.([a-zA-Z0-9_-]+)\\\{color:.([0-9a-fA-F]+)/\\\\definecolor\{\\1\}\{HTML\}\{\\2\}/' > palette.tex}
   \input{palette.tex}
 \usepackage{graphicx}
+\usepackage{fontspec}
+  \newfontfamily\cambriaFont{Cambria}[
+    Path=.,
+    Extension=.ttf,
+    UprightFont=cambria-regular
+  ]
+  \newfontfamily\consolasFont{Consolas}[
+    Path=.,
+    Extension=.ttf,
+    UprightFont=consolas-regular
+  ]
+  \newfontfamily\candaraFont{Candara}[
+    Path=.,
+    Extension=.ttf,
+    UprightFont=candara-regular
+  ]
+  \newfontfamily\molotFont{Molot}[
+    Path=.,
+    Extension=.otf,
+    UprightFont=molot-regular
+  ]
+  \setmainfont{Cambria}
 \pagestyle{empty}
 
 \newcommand\slide[1]{%
@@ -154,13 +168,12 @@
   \header{Typography}
   \par
   {\Huge\begin{multicols}{3}
-  {\rmfamily Noto Serif}
+  {\cambriaFont Cambria}
   \par\columnbreak\par
-  {\sffamily Noto Sans}
+  {\candaraFont Candara}
   \par\columnbreak\par
-  {\ttfamily Noto Sans Mono}
-  \end{multicols}\par}
-  {\small\url{https://fonts.google.com/noto/specimen/Noto+Sans}\par}}
+  {\consolasFont consolas}
+  \end{multicols}\par}}
 
 \slide{
   \href{https://www.zerocracy.com}{zerocracy.com}
