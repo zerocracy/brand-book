@@ -10,6 +10,7 @@
 *.fdb_latexmk
 *.fls
 *.log
+*.otf
 *.out
 *.pyg
 *.run.xml

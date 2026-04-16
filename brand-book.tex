@@ -25,22 +25,22 @@
 \usepackage{graphicx}
 \usepackage{fontspec}
   \newfontfamily\cambriaFont{Cambria}[
-    Path=.,
+    Path=./,
     Extension=.ttf,
     UprightFont=cambria-regular
   ]
   \newfontfamily\consolasFont{Consolas}[
-    Path=.,
+    Path=./,
     Extension=.ttf,
     UprightFont=consolas-regular
   ]
   \newfontfamily\candaraFont{Candara}[
-    Path=.,
+    Path=./,
     Extension=.ttf,
     UprightFont=candara-regular
   ]
   \newfontfamily\molotFont{Molot}[
-    Path=.,
+    Path=./,
     Extension=.otf,
     UprightFont=molot-regular
   ]
@@ -167,12 +167,14 @@
 \slide{
   \header{Typography}
   \par
-  {\Huge\begin{multicols}{3}
+  {\Huge\begin{multicols}{4}
   {\cambriaFont Cambria}
   \par\columnbreak\par
   {\candaraFont Candara}
   \par\columnbreak\par
-  {\consolasFont consolas}
+  {\consolasFont Consolas}
+  \par\columnbreak\par
+  {\molotFont Molot}
   \end{multicols}\par}}
 
 \slide{
