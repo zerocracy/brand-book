@@ -14,10 +14,10 @@ candara-regular.ttf:
 	wget -O $@ https://www.yegor256.com/fonts/candara/$@
 consolas-regular.ttf:
 	wget -O $@ https://www.yegor256.com/fonts/consolas/$@
-molot-regular.otf:
+molot-regular.ttf:
 	wget -O $@ https://www.yegor256.com/fonts/molot/$@
 
-brand-book.pdf: brand-book.tex cambria-regular.ttf candara-regular.ttf consolas-regular.ttf molot-regular.otf
+brand-book.pdf: brand-book.tex cambria-regular.ttf candara-regular.ttf consolas-regular.ttf molot-regular.ttf
 	latexmk -pdf -latexoption=-interaction=errorstopmode -latexoption=-halt-on-error $<
 
 clean:
