@@ -24,27 +24,14 @@
   \input{palette.tex}
 \usepackage{graphicx}
 \usepackage{fontspec}
-  \newfontfamily\cambriaFont{Cambria}[
-    Path=./,
-    Extension=.ttf,
-    UprightFont=cambria-regular
-  ]
-  \newfontfamily\consolasFont{Consolas}[
-    Path=./,
-    Extension=.ttf,
-    UprightFont=consolas-regular
-  ]
-  \newfontfamily\candaraFont{Candara}[
-    Path=./,
-    Extension=.ttf,
-    UprightFont=candara-regular
-  ]
   \newfontfamily\molotFont{Molot}[
     Path=./,
     Extension=.ttf,
     UprightFont=molot-regular
   ]
-  \setmainfont{Cambria}
+  \setmainfont{PT Serif}
+  \setsansfont{PT Sans}
+  \setmonofont{PT Mono}
 \pagestyle{empty}
 
 \newcommand\slide[1]{%
@@ -168,11 +155,11 @@
   \header{Typography}
   \par
   {\Huge\begin{multicols}{4}
-  {\cambriaFont Cambria}
+  {\rmfamily PT Serif}
   \par\columnbreak\par
-  {\candaraFont Candara}
+  {\sffamily PT Sans}
   \par\columnbreak\par
-  {\consolasFont Consolas}
+  {\ttfamily PT Mono}
   \par\columnbreak\par
   {\molotFont Molot}
   \end{multicols}\par}}
