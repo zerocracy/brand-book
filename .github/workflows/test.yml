@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: Copyright (c) 2024-2025 Zerocracy
+# SPDX-License-Identifier: MIT
+---
+# yamllint disable rule:line-length
+name: test
+'on':
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  test:
+    timeout-minutes: 15
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: yegor256/latexmk-action@0.19.0
+        with:
+          cmd: bash
+          opts: -lc "gem install texsc texqc --no-document && make test"
+          debs: fonts-noto-core fonts-noto-extra aspell aspell-en ruby
+          depends: DEPENDS.txt
