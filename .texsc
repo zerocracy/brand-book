@@ -1,5 +1,4 @@
 --pws=aspell.en.pws
---ignore=nospell
 --ignore=equation*
 --ignore=ffcode
 --ignore=setminted
