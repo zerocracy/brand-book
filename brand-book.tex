@@ -43,21 +43,24 @@
 
 \pagecolor{steel}
 
+\newcommand\header[1]{{\scshape\LARGE\textcolor{red}{#1:}\\[1em]\par}}
+\newcommand\intro{\rmfamily\normalsize\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil\setlength{\parindent}{1.5em}}
+\newcommand\hatch[1]{
+  \tikz{
+    \node[fill=#1, minimum width=2em, minimum height=3em] (p) {};
+    \node[font={\small}, anchor=north] (hex) at (p.south) {\parbox{4em}{\centering #1 \\ hex}};}}
+
 \begin{document}
 
 \color{black}
 
 \sffamily
 
-\newcommand\header[1]{{\scshape\LARGE\textcolor{red}{#1:}\\[1em]\par}}
-
 \slide{%
   \includesvg[width=4em]{logo.svg}\\
   Zerocracy
   \\[2em]
   {\large\textcolor{red}{\textbf{Brand Book}}\par}}
-
-\newcommand\intro{\rmfamily\normalsize\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil\setlength{\parindent}{1.5em}}
 
 \slide{
   \header{Mission}
@@ -137,10 +140,6 @@
 \slide{
   \header{Colors}
   \par
-  \newcommand\hatch[1]{
-    \tikz{
-      \node[fill=#1, minimum width=2em, minimum height=3em] (p) {};
-      \node[font={\small}, anchor=north] (hex) at (p.south) {\parbox{4em}{\centering #1 \\ hex}};}}
   \hatch{black}
   \hatch{red}
   \hatch{gray}
