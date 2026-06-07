@@ -7,6 +7,9 @@ name: xcop
   push:
     branches:
       - master
+    paths:
+      - '**.xml'
+      - '.github/workflows/xcop.yml'
   pull_request:
     branches:
       - master
@@ -16,4 +19,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - uses: g4s8/xcop-action@master
+      - uses: g4s8/xcop-action@1.0.1
