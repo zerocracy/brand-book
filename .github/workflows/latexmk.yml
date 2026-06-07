@@ -21,6 +21,10 @@ jobs:
           opts: -pdf
           debs: fonts-noto-core fonts-noto-extra
           depends: DEPENDS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: brand-book-pdf
+          path: brand-book.pdf
       - run: |
           mkdir gh-pages
           cp brand-book.pdf gh-pages
