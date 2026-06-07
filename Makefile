@@ -8,6 +8,10 @@ SHELL=bash
 
 all: brand-book.pdf
 
+test: brand-book.pdf
+	texsc brand-book.tex
+	texqc brand-book
+
 molot-regular.ttf:
 	wget -O $@ https://www.yegor256.com/fonts/molot/$@
 
