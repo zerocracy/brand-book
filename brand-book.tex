@@ -23,7 +23,6 @@
   \iexec{grep -oE '\\.[a-zA-Z0-9_-]+\\\{color:.[0-9a-fA-F]+' < palette.css | sed -E 's/\\.([a-zA-Z0-9_-]+)\\\{color:.([0-9a-fA-F]+)/\\\\definecolor\{\\1\}\{HTML\}\{\\2\}/' > palette.tex}
   \input{palette.tex}
 \usepackage{graphicx}
-\usepackage{fontspec}
   \newfontfamily\molotFont{Molot}[
     Path=./,
     Extension=.ttf,
