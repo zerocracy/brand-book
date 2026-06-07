@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - uses: yegor256/latexmk-action@0.19.0
+      - uses: yegor256/latexmk-action@0.20.0
         with:
           cmd: bash
           opts: -lc "gem install texsc texqc --no-document && make test"
