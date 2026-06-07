@@ -10,7 +10,7 @@
 \usepackage{csquotes}
 \usepackage{textcomp}
 \usepackage{iexec}
-  \iexec[quiet,log]{wget --no-check-certificate -nc --quiet https://www.zerocracy.com/svg/logo.svg}
+  \iexec[quiet,log]{wget -nc --quiet https://www.zerocracy.com/svg/logo.svg}
 \usepackage{href-ul}
 \usepackage{svg}
 \usepackage{multicol}
@@ -19,7 +19,7 @@
 \usepackage{hyperref}
   \hypersetup{colorlinks=true,allcolors=blue}
 \usepackage{xcolor}
-  \iexec[quiet,log]{wget --quiet --no-check-certificate --no-clobber https://www.zerocracy.com/css/palette.css}
+  \iexec[quiet,log]{wget --quiet --no-clobber https://www.zerocracy.com/css/palette.css}
   \iexec{grep -oE '\\.[a-zA-Z0-9_-]+\\\{color:.[0-9a-fA-F]+' < palette.css | sed -E 's/\\.([a-zA-Z0-9_-]+)\\\{color:.([0-9a-fA-F]+)/\\\\definecolor\{\\1\}\{HTML\}\{\\2\}/' > palette.tex}
   \input{palette.tex}
 \usepackage{graphicx}
