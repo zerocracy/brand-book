@@ -12,9 +12,17 @@ make
 ```
 
 You need to have
+[`latexmk`](https://ctan.org/pkg/latexmk),
+[`inkscape`](https://inkscape.org/),
+[`wget`](https://www.gnu.org/software/wget/),
 [`aspell`](http://aspell.net/),
-LaTeX,
-[`texsc`](https://rubygems.org/gems/texsc),
+LaTeX (TeX Live with `xelatex`),
+Ruby (for
+[`texsc`](https://rubygems.org/gems/texsc)
 and
-[`texqc`](https://rubygems.org/gems/texqc)
+[`texqc`](https://rubygems.org/gems/texqc)),
+and the fonts
+[PT Serif](https://fonts.google.com/specimen/PT+Serif),
+[PT Sans](https://fonts.google.com/specimen/PT+Sans),
+[PT Mono](https://fonts.google.com/specimen/PT+Mono)
 installed.
