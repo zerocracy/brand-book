@@ -5,6 +5,9 @@
 name: bibcop
 'on':
   push:
+    paths:
+      - '**.bib'
+      - '.github/workflows/bibcop.yml'
   pull_request:
 jobs:
   bibcop:
@@ -12,4 +15,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - uses: yegor256/bibcop-action@master
+      - uses: yegor256/bibcop-action@0.0.4
