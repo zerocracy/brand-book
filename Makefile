@@ -16,7 +16,7 @@ molot-regular.ttf:
 	wget -O $@ https://www.yegor256.com/fonts/molot/$@
 
 brand-book.pdf: brand-book.tex molot-regular.ttf
-	latexmk -pdf -latexoption=-interaction=errorstopmode -latexoption=-halt-on-error $<
+	latexmk -pdf -latexoption=-interaction=nonstopmode -latexoption=-halt-on-error $<
 
 clean:
 	git clean -dfX
