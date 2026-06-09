@@ -3,14 +3,13 @@ hard booktabs
 hard csquotes
 hard fontspec
 hard geometry
-hard graphicx
+hard graphics
 hard href-ul
 hard hyperref
 hard iexec
 hard microtype
-hard multicol
+hard tools
 hard setspace
 hard svg
-hard textcomp
-hard tikz
+hard pgf
 hard xcolor
