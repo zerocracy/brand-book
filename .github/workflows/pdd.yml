@@ -18,4 +18,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - uses: volodya-lombrozo/pdd-action@69842b56627431c5f232f5ea2dc2fca82f409c54
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+      - run: gem install pdd
+      - run: pdd -f /dev/null
