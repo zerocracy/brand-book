@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: Copyright (c) 2024-2025 Zerocracy
+# SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
 # SPDX-License-Identifier: MIT
 ---
 # yamllint disable rule:line-length
@@ -18,9 +18,4 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.4'
-      - run: sudo apt-get update && sudo apt-get install --no-install-recommends -y libmagic-dev
-      - run: gem install pdd
-      - run: pdd -f /dev/null
+      - uses: volodya-lombrozo/pdd-action@69842b56627431c5f232f5ea2dc2fca82f409c54
