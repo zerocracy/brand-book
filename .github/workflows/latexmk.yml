@@ -7,6 +7,9 @@ name: latexmk
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
@@ -20,7 +23,7 @@ jobs:
       - uses: yegor256/latexmk-action@0.20.0
         with:
           opts: -pdf
-          debs: fonts-noto-core fonts-noto-extra
+          debs: fonts-noto-core fonts-noto-extra fonts-paratype
           depends: DEPENDS.txt
       - uses: actions/upload-artifact@v7
         with:
