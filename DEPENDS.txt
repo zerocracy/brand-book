@@ -31,6 +31,8 @@ hard fontspec
 hard footmisc
 hard framed
 hard fvextra
+hard geometry
+hard graphics
 hard href-ul
 hard hyperxmp
 hard hyphen-russian
@@ -45,6 +47,7 @@ hard microtype
 hard ncctools
 hard noto
 hard paralist
+hard pgf
 hard polyglossia
 hard preprint
 hard setspace
@@ -53,10 +56,12 @@ hard svg
 hard textpos
 hard titling
 hard to-be-determined
+hard tools
 hard totpages
 hard transparent
 hard trimspaces
 hard upquote
 hard url
 hard wrapfig
+hard xcolor
 hard xstring
