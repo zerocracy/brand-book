@@ -7,8 +7,6 @@ name: pdd
   push:
     branches:
       - master
-    paths:
-      - '.github/workflows/pdd.yml'
   pull_request:
     branches:
       - master
