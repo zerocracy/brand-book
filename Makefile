@@ -15,7 +15,7 @@ test: brand-book.pdf
 molot-regular.ttf:
 	wget -O $@ https://www.yegor256.com/fonts/molot/$@
 
-brand-book.pdf: brand-book.tex molot-regular.ttf
+brand-book.pdf: brand-book.tex molot-regular.ttf .latexmkrc
 	latexmk -pdf -latexoption=-interaction=nonstopmode -latexoption=-halt-on-error $<
 
 clean:
