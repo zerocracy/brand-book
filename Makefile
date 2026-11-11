@@ -21,7 +21,7 @@ molot-regular.ttf:
 	wget -O "$$tmp" https://www.yegor256.com/fonts/molot/$@
 	mv "$$tmp" "$@"
 
-brand-book.pdf: brand-book.tex molot-regular.ttf
+brand-book.pdf: brand-book.tex molot-regular.ttf .latexmkrc
 	latexmk -pdf -latexoption=-interaction=nonstopmode -latexoption=-halt-on-error $<
 
 clean:
