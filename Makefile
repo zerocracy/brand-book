@@ -4,19 +4,25 @@
 .SHELLFLAGS=-e -o pipefail -c
 .ONESHELL:
 SHELL=bash
-.PHONY: all test test-assets clean FORCE
+.PHONY: all test test-download test-assets clean FORCE
 
 all: brand-book.pdf
 
-test: test-assets brand-book.pdf
+test: test-download test-assets brand-book.pdf
 	texsc brand-book.tex
 	texqc brand-book
 
 test-assets:
 	bash test-assets.sh
 
+test-download:
+	bash test-font-download.sh Makefile
+
 molot-regular.ttf:
-	wget -O $@ https://www.yegor256.com/fonts/molot/$@
+	tmp=$$(mktemp "$@.XXXXXX")
+	trap 'rm -f "$$tmp"' EXIT
+	wget -O "$$tmp" https://www.yegor256.com/fonts/molot/$@
+	mv "$$tmp" "$@"
 
 logo.svg: FORCE
 	temp=$$(mktemp "$@.XXXXXX")
@@ -42,7 +48,7 @@ palette.tex: palette.css Makefile
 		mv "$${temp}" "$@"
 	fi
 
-brand-book.pdf: brand-book.tex molot-regular.ttf logo.svg palette.tex
+brand-book.pdf: brand-book.tex molot-regular.ttf .latexmkrc logo.svg palette.tex
 	latexmk -pdf -latexoption=-interaction=nonstopmode -latexoption=-halt-on-error $<
 
 FORCE:

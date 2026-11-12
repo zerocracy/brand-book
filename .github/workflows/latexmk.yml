@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
-      - run: make test-assets molot-regular.ttf logo.svg palette.tex
+      - run: make test-download test-assets molot-regular.ttf logo.svg palette.tex
       - uses: yegor256/latexmk-action@0.20.0
         with:
           opts: -pdf brand-book.tex

@@ -46,6 +46,7 @@ mkdir "${REMOTE}"
 cd "${fixture}"
 pdfs=(brand-book.pdf)
 touch molot-regular.ttf
+touch -t 200001010000 .latexmkrc
 
 check_pdfs() {
     cat logo.svg palette.tex > expected.pdf
