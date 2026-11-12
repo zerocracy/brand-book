@@ -19,11 +19,10 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v7
-      - run: make test-download
-      - run: wget -O molot-regular.ttf https://www.yegor256.com/fonts/molot/molot-regular.ttf
+      - run: make test-download test-assets molot-regular.ttf logo.svg palette.tex
       - uses: yegor256/latexmk-action@0.20.0
         with:
-          opts: -pdf
+          opts: -pdf brand-book.tex
           debs: fonts-noto-core fonts-noto-extra fonts-paratype
           depends: DEPENDS.txt
       - uses: actions/upload-artifact@v7
