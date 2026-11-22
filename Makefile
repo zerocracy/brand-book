@@ -4,13 +4,16 @@
 .SHELLFLAGS=-e -o pipefail -c
 .ONESHELL:
 SHELL=bash
-.PHONY: all test test-download clean
+.PHONY: all test test-download test-depends clean
 
 all: brand-book.pdf
 
-test: test-download brand-book.pdf
+test: test-download test-depends brand-book.pdf
 	texsc brand-book.tex
 	texqc brand-book
+
+test-depends:
+	bash test-depends.sh
 
 test-download:
 	bash test-font-download.sh Makefile
