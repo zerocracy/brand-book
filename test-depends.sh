@@ -7,11 +7,13 @@ cd "$(dirname "$0")"
 expected="$(mktemp)"
 trap 'rm -f "$expected"' EXIT
 # TeX Live distributes some LaTeX packages together under a different name.
+# iexec requires pgfopts, which the CI package installer does not add transitively.
 # textcomp ships with the LaTeX base, which the build already requires.
 sed -nE 's/^[[:space:]]*\\usepackage(\[[^]]*\])?\{([^}]+)\}.*/\2/p' brand-book.tex |
   tr ',' '\n' |
   while read -r package; do
     case "$package" in
+      iexec) printf 'hard pgfopts\n' ;;
       tikz) package=pgf ;;
       graphicx) package=graphics ;;
       multicol) package=tools ;;

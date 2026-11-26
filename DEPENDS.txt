@@ -9,6 +9,7 @@ hard hyperref
 hard iexec
 hard microtype
 hard pgf
+hard pgfopts
 hard setspace
 hard svg
 hard tools
