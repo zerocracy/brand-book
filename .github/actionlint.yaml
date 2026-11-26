@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Copyright (c) 2024-2026 Zerocracy
+# SPDX-License-Identifier: MIT
+---
+# GitHub hosts this runner, but actionlint 1.7.12 does not recognize it yet.
+# Remove this entry once actionlint supports ubuntu-26.04 out of the box.
+self-hosted-runner:
+  labels:
+    - ubuntu-26.04
