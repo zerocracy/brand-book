@@ -3,7 +3,8 @@
 
 \documentclass{article}
 \usepackage{fontspec}
-\usepackage{microtype}
+% These slides have no footnotes; avoid patching hyperref's footnote internals.
+\usepackage[nopatch=footnote]{microtype}
 \usepackage{tikz}
 \usepackage{anyfontsize}
 \usepackage{booktabs}
@@ -12,7 +13,7 @@
 \usepackage{iexec}
   \iexec[quiet,log]{wget -nc --quiet https://www.zerocracy.com/svg/logo.svg}
 \usepackage{href-ul}
-\usepackage{svg}
+\usepackage[notransparent]{svg}
 \usepackage{multicol}
 \usepackage{setspace}
 \usepackage[paperwidth=11in, paperheight=5in]{geometry}
@@ -42,8 +43,8 @@
 
 \pagecolor{steel}
 
-\newcommand\header[1]{{\scshape\LARGE\textcolor{red}{#1:}\\[1em]\par}}
-\newcommand\intro{\rmfamily\normalsize\leftskip=0pt\rightskip=0pt\parfillskip=0pt plus 1fil\setlength{\parindent}{1.5em}}
+\newcommand\header[1]{{\LARGE\textcolor{red}{#1:}\\[1em]\par}}
+\newcommand\intro{\rmfamily\normalsize\raggedright\setlength{\parindent}{1.5em}}
 \newcommand\hatch[1]{
   \tikz{
     \node[fill=#1, minimum width=2em, minimum height=3em] (p) {};
