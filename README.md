@@ -11,6 +11,10 @@ To build it, just run:
 make
 ```
 
+Make refreshes `logo.svg` and `palette.css` from the Zerocracy website and
+generates `palette.tex` before checking whether the PDF needs rebuilding.
+Unchanged files keep their timestamps.
+
 You need to have
 [`latexmk`](https://ctan.org/pkg/latexmk),
 [`inkscape`](https://inkscape.org/),
@@ -34,3 +38,5 @@ Ruby, and the
 [`texsc`](https://rubygems.org/gems/texsc)
 and
 [`texqc`](https://rubygems.org/gems/texqc) gems.
+
+The asset refresh regressions can also run without LaTeX: `make test-assets`.
